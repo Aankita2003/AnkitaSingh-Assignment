@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worker Progress Report — WCB Manitoba</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sheet">
+  <div class="doc-header">
+    <div class="brand">
+       <div class="logo">
+                <img src="images/logo.png" alt="WCB Logo">
+            </div>
+      <div>
+        <div class="brand-name">Workers Compensation<br>
+        <span class="thin">Board of Manitoba</span></div>
+        <div class="brand-contact">
+          <div>333 Broadway</div>
+          <div>Winnipeg, MB R3C 4W3</div>
+          <div>Phone: (204) 954-4321</div>
+          <div>Toll Free: 1-855-954-4321</div>
+          <div>wcb.mb.ca</div>
+        </div>
+      </div>
+    </div>
+    <div class="doc-title-block">
+      <div class="doc-title">Worker Progress Report</div>
+      <div class="claim-boxes">
+        <div class="claim-box">Claim No. 20042047</div>
+        <div class="claim-box small">WP</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="intro">
+    <input class="name-field" type="text" value="Madeleine Willson"> provided the following updates in relation to their claim:
+  </div>
+
+  <form id="wp-form">
+    <div class="section-title">Return to Work</div>
+
+    <div class="box">
+      <div class="box-label">Select one:</div>
+      <div class="option-row">
+        <label class="option">
+          <input type="radio" name="missed-time">
+          <span class="opt-text">I have not missed time from work</span>
+        </label>
+        <label class="option">
+          <input type="radio" name="missed-time">
+          <span class="opt-text">I have not returned to work</span>
+        </label>
+        <label class="option">
+          <input type="radio" name="missed-time" checked>
+          <span class="opt-text">
+            I returned to work on:
+            <span class="date-wrap">
+              <input class="field-underline" type="text" value="March 15, 2024" style="margin-top:4px;">
+              <span class="field-cap">Date</span>
+            </span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-label">I am working:</div>
+      <div class="option-row">
+        <label class="option"><input type="checkbox">
+            <span class="opt-text">Full duties, regular hours</span>
+        </label>
+        <label class="option"><input type="checkbox">
+            <span class="opt-text">Full duties, reduced hours</span>
+        </label>
+        <label class="option"><input type="checkbox">
+            <span class="opt-text">Modified duties, regular hours</span>
+        </label>
+        <label class="option"><input type="checkbox" checked>
+            <span class="opt-text">Modified duties, reduced hours</span>
+        </label>
+        <label class="option"><input type="checkbox">
+            <span class="opt-text">Other: <input class="field-underline" type="text" style="min-width:220px;"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-label">My return to work is going:</div>
+      <textarea class="free-text" rows="2">Terrible. Testing Testing</textarea>
+    </div>
+
+    <div class="two-col-question">
+      <span>I expect to return to work on:</span>
+      <div class="field-block">
+        <input class="field-underline" type="text">
+        <span class="field-cap">Date</span>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-label">I have the following concerns about returning to work:</div>
+      <textarea class="free-text" rows="4"></textarea>
+    </div>
+
+    <div class="two-col-question">
+      <span>I was most recently in contact with:</span>
+      <div class="field-block">
+        <input class="field-underline" type="text">
+        <span class="field-cap">(Name of employer contact)</span>
+      </div>
+      <span>on</span>
+      <div class="field-block">
+        <input class="field-underline" type="text">
+        <span class="field-cap">Date</span>
+      </div>
+    </div>
+
+    <div class="section-title">Recovery</div>
+
+    <div class="box">
+      <div class="box-label">Select one:</div>
+      <div class="option-row">
+        <label class="option"><input type="radio" name="recovered"><span class="opt-text">I have not fully recovered from my workplace injury.</span></label>
+        <label class="option"><input type="radio" name="recovered" checked><span class="opt-text">I have fully recovered from my workplace injury.</span></label>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-label">I have provided the following comments about my recovery:</div>
+      <textarea class="free-text" rows="4"></textarea>
+    </div>
+
+    <div class="box pain-scale-wrap">
+      <div class="box-label">I rate my current pain/discomfort on a scale of 1-10, where 1 is no pain and 10 is severe pain out of 10.</div>
+      <div class="pain-scale">
+        <label class="pain-opt"><input type="radio" name="pain">1</label>
+        <label class="pain-opt"><input type="radio" name="pain">2</label>
+        <label class="pain-opt"><input type="radio" name="pain">3</label>
+        <label class="pain-opt"><input type="radio" name="pain">4</label>
+        <label class="pain-opt"><input type="radio" name="pain">5</label>
+        <label class="pain-opt"><input type="radio" name="pain">6</label>
+        <label class="pain-opt"><input type="radio" name="pain">7</label>
+        <label class="pain-opt"><input type="radio" name="pain">8</label>
+        <label class="pain-opt"><input type="radio" name="pain">9</label>
+        <label class="pain-opt"><input type="radio" name="pain">10</label>
+      </div>
+      <div class="pain-caption"><span>No pain</span><span>Severe pain</span></div>
+    </div>
+
+    <div class="box">
+      <div class="box-label">Select one:</div>
+      <div class="option-row">
+        <label class="option"><input type="radio" name="treatment">
+            <span class="opt-text">I am not continuing to receive medical treatment for my workplace injury.</span>
+        </label>
+        <label class="option"><input type="radio" name="treatment">
+            <span class="opt-text">I am continuing to receive medical treatment for my workplace injury from: 
+                <input class="field-underline" type="text" style="min-width:200px;">
+                <span class="field-cap">(Medical Provider Type)</span>
+            </span>
+        </label>
+      </div>
+
+      <div class="grid-two" style="margin-top:14px;">
+        <div class="two-col-question" style="padding:0;">
+          <span>My last medical treatment was from</span>
+          <div class="field-block">
+            <input class="field-underline" type="text">
+            <span class="field-cap">Date</span>
+        </div>
+        </div>
+        <div class="two-col-question" style="padding:0;">
+          <span>
+          </span>
+          <div class="field-block">
+            <input class="field-underline" type="text">
+            <span class="field-cap">(Medical Provider Name)</span>
+        </div>
+        </div>
+      </div>
+      <div class="two-col-question" style="padding-top:10px;">
+        <span>I am attending a Chiropractor or Physiotherapist</span>
+        <div class="field-block">
+            <input class="field-underline" type="text">
+            <span class="field-cap">(Frequency)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-label">Select one:</div>
+      <div class="option-row">
+        <label class="option">
+            <input type="radio" name="meds">
+            <span class="opt-text">I am not taking medication for my workplace injury.</span>
+        </label>
+        <label class="option"><input type="radio" name="meds">
+            <span class="opt-text">I am taking medication for my workplace injury:
+                 <input class="field-underline" type="text" style="min-width:200px;">
+                 <span class="field-cap">(Name of prescribed medication)</span>
+                </span>
+            </label>
+      </div>
+      <div class="two-col-question" style="padding-top:14px;">
+        <span>My next medical treatment is</span>
+        <div class="field-block">
+            <input class="field-underline" type="text">
+            <span class="field-cap">Date</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-label">Select one:</div>
+      <div class="option-row">
+        <label class="option">
+            <input type="radio" name="home-ex">
+            <span class="opt-text">I am not doing home exercises for my workplace injury.</span>
+        </label>
+        <label class="option">
+            <input type="radio" name="home-ex">
+            <span class="opt-text">I am doing home exercises for my workplace injury.</span>
+        </label>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="box-label">List the exercises you are doing:</div>
+        <textarea class="free-text exercise-list" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="section-title">Other Information</div>
+
+    <div class="box">
+      <div class="box-label">I would like to provide the following additional information about my claim/injury:</div>
+      <textarea class="free-text" rows="3">No info Testing Testing</textarea>
+    </div>
+    <div class="cert-box">
+      I certify that the information given on this form is true, correct and complete to the best of my knowledge.
+      I agree to notify the Workers Compensation Board of Manitoba (WCB) immediately once I return to any form of
+      work and/or employment. I understand that it is an offence to knowingly make a false statement to the WCB.
+      I also understand that it is an offence to withhold information from WCB which affects my entitlement to
+      compensation (e.g., full or partial recovery from injury, ability to return to work, sources of additional
+      income, etc.). I understand that refusing to co-operate with, or follow my treatment, may result in the WCB
+      reducing or suspending my benefits. I understand that the Privacy Notice applies to the personal information
+      collected in this document.
+      <label class="cert-check">
+        <input type="checkbox" id="cert-agree">
+        <span>I certify that the information provided is true, correct, and complete.</span>
+      </label>
+    </div>
+
+  </form>
+
+  <div class="status-msg" id="status-msg">Form submitted — thank you.</div>
+
+  <div class="submit-row">
+    <button type="button" class="btn btn-secondary" id="reset-btn">Clear form</button>
+    <button type="button" class="btn btn-primary" id="submit-btn">Submit report</button>
+  </div>
+
+  <div class="doc-footer">
+    <div>Worker App ID: 712041</div>
+    <div class="page-no">Submitted: March 19, 2024 19:21</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

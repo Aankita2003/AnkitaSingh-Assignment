@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical &amp; Travel Expense Request — WCB Manitoba</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sheet">
+
+  <!-- Header -->
+  <div class="doc-header">
+    <div class="brand">
+       <div class="logo">
+                <img src="images/logo.png" alt="WCB Logo">
+            </div>
+      <div>
+        <div class="brand-name">Workers Compensation<br>
+            <span class="thin">Board of Manitoba</span></div>
+        <div class="brand-contact">
+          <div>333 Broadway</div>
+          <div>Winnipeg, MB R3C 4W3</div>
+          <div>Phone: (204) 954-4321</div>
+          <div>Toll Free: 1-855-954-4321</div>
+          <div>wcb.mb.ca</div>
+        </div>
+      </div>
+    </div>
+    <div class="doc-title-block">
+      <div class="doc-title">Medical &amp; Travel Expense Request</div>
+      <div class="claim-boxes">
+        <div class="claim-box">Claim No. 20042047</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="intro">
+    <input class="name-field" type="text" value="Madeleine Willson"> requested reimbursement for the following medical and/or travel expenses:
+  </div>
+
+  <form id="expense-form">
+
+    <!-- PRESCRIPTION DRUGS -->
+    <div class="section-title">Prescription Drugs</div>
+    <div class="table-wrap">
+      <table class="data-table" id="table-prescription">
+        <thead>
+          <tr>
+            <th>Drug Name</th>
+            <th>Prescription Date</th>
+            <th>Date Purchased</th>
+            <th>Healthcare Provider Name</th>
+            <th>Paid Amount</th>
+            <th class="col-remove"></th>
+          </tr>
+        </thead>
+        <tbody id="body-prescription"></tbody>
+      </table>
+    </div>
+    <button type="button" class="add-row-btn" data-target="prescription">+ Add prescription drug</button>
+
+    <!-- OVER THE COUNTER DRUGS -->
+    <div class="section-title">Over-the-Counter Drugs</div>
+    <div class="table-wrap">
+      <table class="data-table" id="table-otc">
+        <thead>
+          <tr>
+            <th>Drug Name</th>
+            <th>Date Purchased</th>
+            <th>Paid Amount</th>
+            <th>Seller's Name</th>
+            <th>Reason for Purchasing</th>
+            <th class="col-remove"></th>
+          </tr>
+        </thead>
+        <tbody id="body-otc"></tbody>
+      </table>
+    </div>
+    <button type="button" class="add-row-btn" data-target="otc">+ Add over-the-counter drug</button>
+
+    <!-- BANDAGES / BRACES / SUPPLIES -->
+    <div class="section-title">Bandages, Braces or Other Medical Supplies</div>
+    <div class="table-wrap">
+      <table class="data-table" id="table-supplies">
+        <thead>
+          <tr>
+            <th>Item Purchased</th>
+            <th>Date Purchased</th>
+            <th>Was this Prescribed?</th>
+            <th>Healthcare Provider Name</th>
+            <th>Paid Amount</th>
+            <th>Seller's Name</th>
+            <th class="col-remove"></th>
+          </tr>
+        </thead>
+        <tbody id="body-supplies"></tbody>
+      </table>
+    </div>
+    <button type="button" class="add-row-btn" data-target="supplies">+ Add medical supply</button>
+
+    <!-- PARKING -->
+    <div class="section-title">Parking for Medical Appointments</div>
+    <div class="table-wrap">
+      <table class="data-table" id="table-parking">
+        <thead>
+          <tr>
+            <th>Address of Healthcare Provider/Medical Facility</th>
+            <th>Date</th>
+            <th>Paid Amount</th>
+            <th>Meter Used?</th>
+            <th>Meter Number</th>
+            <th class="col-remove"></th>
+          </tr>
+        </thead>
+        <tbody id="body-parking"></tbody>
+      </table>
+    </div>
+    <button type="button" class="add-row-btn" data-target="parking">+ Add parking expense</button>
+
+    <!-- MILEAGE -->
+    <div class="section-title">Mileage to Medical Appointments</div>
+    <p class="note-text">The WCB will generally reimburse only those transportation costs which are in excess of costs that would be incurred by the worker while travelling to and from work.</p>
+    <div class="table-wrap">
+      <table class="data-table" id="table-mileage">
+        <thead>
+          <tr>
+            <th>Appointment Date</th>
+            <th>Address of Healthcare Provider/Medical Facility</th>
+            <th>Address of Workplace</th>
+            <th>Number of km (Round Trip)</th>
+            <th class="col-remove"></th>
+          </tr>
+        </thead>
+        <tbody id="body-mileage"></tbody>
+      </table>
+    </div>
+    <button type="button" class="add-row-btn" data-target="mileage">+ Add mileage entry</button>
+
+    <!-- BUS OR TAXI FARE -->
+    <div class="section-title">Bus or Taxi Fare for Medical Appointments<span class="asterisk">*</span></div>
+    <p class="note-text">*Note: Pre-approval is required from your WCB representative to claim taxi fare(s).</p>
+    <div class="table-wrap">
+      <table class="data-table" id="table-fare">
+        <thead>
+          <tr>
+            <th>Appointment Date</th>
+            <th>Address of Starting Point</th>
+            <th>Address of Healthcare Provider/Medical Facility</th>
+            <th>Bus or Taxi (indicate one)</th>
+            <th>Total Fare Paid</th>
+            <th class="col-remove"></th>
+          </tr>
+        </thead>
+        <tbody id="body-fare"></tbody>
+      </table>
+    </div>
+    <button type="button" class="add-row-btn" data-target="fare">+ Add bus or taxi fare</button>
+
+    <!-- PRIVACY NOTICE -->
+    <div class="privacy-row">
+      <label class="cert-check">
+        <input type="checkbox" id="privacy-agree" checked>
+        <span>I understand that the <a href="#" class="privacy-link">Privacy Notice</a> applies to the personal information collected in this document.</span>
+      </label>
+    </div>
+
+  </form>
+
+  <div class="status-msg" id="status-msg">Request submitted — thank you.</div>
+
+  <div class="submit-row">
+    <button type="button" class="btn btn-secondary" id="reset-btn">Clear form</button>
+    <button type="button" class="btn btn-primary" id="submit-btn">Submit request</button>
+  </div>
+
+  <div class="doc-footer">
+    <div>Worker App ID: 712041</div>
+    <div class="page-no">Submitted: March 28, 2024 20:43</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

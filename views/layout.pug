@@ -1,0 +1,17 @@
+//- ==========================================================================
+//- views/layout.pug
+//- Base layout extended by every page. Pulls in the shared stylesheet and
+//- both mixin libraries so child templates can use any mixin directly.
+//- ==========================================================================
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet' href='/css/style.css')
+  body
+    //- Mixins are included once here and become available to all children
+    include mixins/layout-mixins.pug
+    include mixins/field-mixins.pug
+    block content

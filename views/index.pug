@@ -1,0 +1,14 @@
+//- ==========================================================================
+//- views/index.pug — simple landing page linking to both forms.
+//- ==========================================================================
+extends layout
+
+block content
+  .landing
+    h1 WCB Manitoba — Assignment 2
+    p Pug-rendered, print-ready (A4) versions of both forms. All values are simulated backend data — use the dataset switcher on each page to flip between the two datasets.
+    ul.landing-links
+      li
+        a(href='/expense-request') Medical &amp; Travel Expense Request
+      li
+        a(href='/progress-report') Worker Progress Report

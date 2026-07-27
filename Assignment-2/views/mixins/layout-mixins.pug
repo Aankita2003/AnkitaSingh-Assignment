@@ -1,0 +1,71 @@
+//- ==========================================================================
+//- mixins/layout-mixins.pug
+//- Layout-level building blocks shared by BOTH forms (reusability between
+//- forms). Each mixin is self-contained and driven purely by its arguments,
+//- so neither form duplicates any header/footer/section markup.
+//- ==========================================================================
+
+//- Dataset switcher (demo aid) — lets the presenter flip between the two
+//- simulated backend datasets. Hidden automatically when printing.
+//- @param basePath   current route, e.g. '/expense-request'
+//- @param datasetId  the dataset currently rendered (1 or 2)
+mixin datasetSwitcher(basePath, datasetId)
+  .dataset-switcher.no-print
+    span.switcher-label Simulated backend dataset:
+    a.switcher-btn(href=`${basePath}?dataset=1` class=(datasetId === 1 ? 'active' : '')) Dataset 1
+    a.switcher-btn(href=`${basePath}?dataset=2` class=(datasetId === 2 ? 'active' : '')) Dataset 2
+    button.switcher-btn.print-btn(type='button' onclick='window.print()') Print / Save as PDF
+
+//- Document header: WCB branding block + document title + claim number boxes.
+//- @param docTitle   e.g. 'Medical & Travel Expense Request'
+//- @param claimNo    claim number string
+//- @param formCode   optional small code box (e.g. 'WP'); omit to hide
+mixin docHeader(docTitle, claimNo, formCode)
+  header.doc-header
+    .brand
+      .logo
+        img(src='/images/logo.png' alt='WCB Manitoba logo')
+      div
+        .brand-name
+          | Workers Compensation
+          br
+          span.thin Board of Manitoba
+        .brand-contact
+          div 333 Broadway
+          div Winnipeg, MB R3C 4W3
+          div Phone: (204) 954-4321
+          div Toll Free: 1-855-954-4321
+          div wcb.mb.ca
+    .doc-title-block
+      .doc-title= docTitle
+      .claim-boxes
+        .claim-box Claim No. #{claimNo}
+        //- The small code box only renders when a formCode is supplied
+        if formCode
+          .claim-box.small= formCode
+
+//- Intro sentence with the claimant's name shown as a read-only value.
+//- @param name  claimant name (from backend data)
+//- @param text  the sentence that follows the name
+mixin introLine(name, text)
+  .intro
+    span.name-value= name
+    | #{' ' + text}
+
+//- Blue section banner. Supports an optional red asterisk marker.
+mixin sectionTitle(text, asterisk)
+  .section-title
+    = text
+    if asterisk
+      span.asterisk *
+
+//- Italic helper note under a section title.
+mixin noteText(text)
+  p.note-text= text
+
+//- Document footer — printed at the bottom of the LAST page regardless of
+//- how much table data precedes it (see @media print rules in style.css).
+mixin docFooter(workerAppId, submittedAt)
+  footer.doc-footer
+    div Worker App ID: #{workerAppId}
+    .page-no Submitted: #{submittedAt}

@@ -1,10 +1,10 @@
 # Assignment 2 - WCB Manitoba Forms
 
-## About the Project
+## Project Overview
 
-This project is created using Express.js and Pug. The goal was to recreate two WCB Manitoba forms and display the data using Pug templates. The forms are designed to look similar to the original PDF and are also print-friendly.
+This project is built using **Node.js**, **Express.js**, and **Pug**. The objective of this assignment is to recreate two WCB Manitoba forms using Pug templates and display the data from sample datasets. The forms are designed to closely match the original layout and are optimized for A4 printing.
 
-## Forms
+## Forms Included
 
 - Medical & Travel Expense Request
 - Worker Progress Report
@@ -38,78 +38,99 @@ Assignment-2
 
 ## How to Run
 
-Clone the repository.
+### 1. Clone the repository
 
 ```bash
 git clone <repository-url>
 ```
 
-Go to the project folder.
+### 2. Open the project folder
 
 ```bash
 cd Assignment-2
 ```
 
-Install the dependencies.
+### 3. Install dependencies
 
 ```bash
 npm install
 ```
 
-Run the project.
+### 4. Start the server
 
 ```bash
 npm start
 ```
 
-Open your browser and visit:
+### 5. Open in your browser
 
 ```
 http://localhost:3000
 ```
 
-## Pages
+## Available Pages
 
-Expense Request Form
+### Medical & Travel Expense Request
 
 ```
 http://localhost:3000/expense-request
 ```
 
-Worker Progress Report
+### Worker Progress Report
 
 ```
 http://localhost:3000/progress-report
 ```
 
-## Dataset
+## Dataset Switching
 
-The project has two sample datasets. You can switch between them by changing the URL.
+The project contains two sample datasets. You can switch between them by changing the dataset value in the URL.
+
+Dataset 1
 
 ```
 http://localhost:3000/expense-request?dataset=1
 ```
 
+Dataset 2
+
 ```
 http://localhost:3000/expense-request?dataset=2
 ```
 
-## Print
+## Print Support
 
-The forms are made for A4 printing and the layout remains clean when printed.
+- A4 page layout
+- Print-friendly design
+- Footer stays in the correct position
+- Tables are formatted properly for printing
+
+## Demo Video
+
+Project demonstration:
+
+https://youtu.be/T5UJ60y2pm4?si=HTtZuJVzlj-b0nxc
 
 ## What I Learned
 
-While doing this assignment, I learned how to:
+While working on this assignment, I learned how to:
 
-- Use Pug with Express.js
-- Pass data from the backend to templates
+- Build an Express.js application
+- Use Pug as a template engine
+- Pass data from the backend to Pug templates
 - Create reusable layouts and mixins
 - Organize project files
-- Make web pages print-friendly
+- Design print-friendly web pages
+
+## Future Improvements
+
+- Connect the forms to a database
+- Add user authentication
+- Allow users to submit forms online
+- Generate downloadable PDF files
 
 ## Author
 
-Ankita Singh
+**Ankita Singh**
 
-B.Tech - Computer Science & Engineering
+B.Tech – Computer Science & Engineering

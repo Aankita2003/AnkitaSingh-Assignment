@@ -1,14 +1,14 @@
-# Assignment 2 – WCB Manitoba Forms (Pug + Express)
+# Assignment 2 - WCB Manitoba Forms
 
-## Project Overview
+## About the Project
 
-This project recreates two WCB Manitoba forms using **Pug**, **Express.js**, **HTML**, and **CSS**. The forms are designed to match the original layout and are optimized for A4 printing. All form data is displayed using sample backend datasets.
+This project is created using Express.js and Pug. The goal was to recreate two WCB Manitoba forms and display the data using Pug templates. The forms are designed to look similar to the original PDF and are also print-friendly.
 
-## Forms Included
+## Forms
 
 - Medical & Travel Expense Request
 - Worker Progress Report
-  
+
 ## Technologies Used
 
 - Node.js
@@ -17,16 +17,6 @@ This project recreates two WCB Manitoba forms using **Pug**, **Express.js**, **H
 - HTML
 - CSS
 - JavaScript
-
-## Features
-
-- Forms rendered using Pug templates
-- Two WCB Manitoba forms
-- Read-only form data
-- Two sample datasets that can be switched
-- Print-friendly A4 layout
-- Shared layout and reusable Pug mixins
-- Clean and organized project structure
 
 ## Project Structure
 
@@ -46,57 +36,55 @@ Assignment-2
 └── README.md
 ```
 
-## Installation
+## How to Run
 
-Clone the repository:
+Clone the repository.
 
 ```bash
 git clone <repository-url>
 ```
 
-Go to the project folder:
+Go to the project folder.
 
 ```bash
 cd Assignment-2
 ```
 
-Install the required packages:
+Install the dependencies.
 
 ```bash
 npm install
 ```
 
-Start the server:
+Run the project.
 
 ```bash
 npm start
 ```
 
-Open your browser:
+Open your browser and visit:
 
 ```
 http://localhost:3000
 ```
 
-## Available Pages
+## Pages
 
-### Medical & Travel Expense Request
+Expense Request Form
 
 ```
 http://localhost:3000/expense-request
 ```
 
-### Worker Progress Report
+Worker Progress Report
 
 ```
 http://localhost:3000/progress-report
 ```
 
-## Dataset Switching
+## Dataset
 
-The project includes two sample datasets.
-
-Open the forms with either dataset by using the URL below:
+The project has two sample datasets. You can switch between them by changing the URL.
 
 ```
 http://localhost:3000/expense-request?dataset=1
@@ -106,33 +94,22 @@ http://localhost:3000/expense-request?dataset=1
 http://localhost:3000/expense-request?dataset=2
 ```
 
-## Print Support
+## Print
 
-- A4 page layout
-- Clean print formatting
-- Footer stays in the correct position
-- Table rows do not split across pages
+The forms are made for A4 printing and the layout remains clean when printed.
 
 ## What I Learned
 
-While working on this project, I learned how to:
+While doing this assignment, I learned how to:
 
-- Build a web application using Express.js
-- Create reusable templates with Pug
-- Organize project files properly
-- Render dynamic data using templates
-- Design pages that print correctly
-- Reuse code with Pug mixins
-
-## Future Improvements
-
-- Connect the forms to a database
-- Add user authentication
-- Allow users to submit forms online
-- Generate downloadable PDF versions
+- Use Pug with Express.js
+- Pass data from the backend to templates
+- Create reusable layouts and mixins
+- Organize project files
+- Make web pages print-friendly
 
 ## Author
 
-**Ankita Singh**
+Ankita Singh
 
-B.Tech – Computer Science & Engineering
+B.Tech - Computer Science & Engineering
